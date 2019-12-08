@@ -1,0 +1,30 @@
+curl -XPUT 'localhost:9200' -H 'Content-Type: application/json' -d '{
+    "settings": {
+        "analysis": {
+            "analyzer": {
+                "ngram_analyzer": {
+                    "tokenizer": "ngram_tokenizer"
+                }
+            },
+            "tokenizer": {
+                "ngram_tokenizer": {
+                    "type": "nGram",
+                    "min_gram": "2",
+                    "max_gram": "3"
+                }
+            }
+        }
+    },
+    "mappings": {
+        "properties": {
+            "uri": {"type": "text"},
+            "uri_count": {"type": "integer"},
+            "surface_form": {"type": "text"},
+            "surface_ngram": {
+                "type": "text",
+                "analyzer": "ngram_analyzer"
+            },
+            "context": {"type": "text"}
+        }
+    }
+}'
