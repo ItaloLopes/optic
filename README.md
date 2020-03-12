@@ -128,17 +128,18 @@ The table below presents the results of OPTIC on the [GERBIL](http://gerbil.aksw
 | OPTIC | 0.2906 | 0.3362 | 0.5089 |
 
 The OPTIC results were obtained by using the following parameter values:
-	* embed=200
-	* hidden=200
-	* layer=2
-	* dropout=0.5
-	* batch_size=1
-	* extra=1
-	* type=multi
-	* max=100
-	* boost=5
-	* threshold=0.7
-	* ws=3
+	
+* embed=200
+* hidden=200
+* layer=2
+* dropout=0.5
+* batch_size=1
+* extra=1
+* type=multi
+* max=100
+* boost=5
+* threshold=0.7
+* ws=3
 
 The OPTIC model already trained can be obtained [here](https://1drv.ms/u/s!AjCojhWwB578jvJK5sk-LdnS86Z3cA?e=E2N8nI).
 
