@@ -44,17 +44,17 @@ python3.7 train.py
 
 Moreover, it is necessary to declare the following arguments:
 
---batch 					Size of batch
---output_dim 				Dimension of the output layer (always 1 for our model)
---embedding 				Dimension of the embeddings
---dropout 					Dropout value
---epoch						Number of epochs that the training will run
---hidden 					Number of cells for hidden layer(s)
---layer 					Number of hidden layers
---datapath 					Data files path
---dataset 					Dataset name
---ws 						Size of the window context
---popularity 				Flag to consider or not the popularity (Not implemented yet, always consider the popularity)
+	--batch 				Size of batch
+	--output_dim 				Dimension of the output layer (always 1 for our model)
+	--embedding 				Dimension of the embeddings
+	--dropout 				Dropout value
+	--epoch					Number of epochs that the training will run
+	--hidden 				Number of cells for hidden layer(s)
+	--layer 				Number of hidden layers
+	--datapath 				Data files path
+	--dataset 				Dataset name
+	--ws 					Size of the window context
+	--rank 					Flag to consider or not the popularity (Not implemented yet, always consider the popularity)
 
 Lastly, in our case, we use the following pattern for, respectively, our train and test set: train_DATASET.json and test_DATASET.json. The DATASET refers to the dataset name specified by the argument --dataset.
 
@@ -73,6 +73,7 @@ flask run
 ```
 
 OPTIC requires several arguments, detailed as following:
+	
 	General type arguments:
 		--mode 				Type of experiment that OPTIC will execute (a2kb,d2kb). Currently only supporting d2kb
 		--input 			Folder path with NIF files to be disambiguated
@@ -109,6 +110,8 @@ Running as Web Service, it is necessary to pass each NIF file individually.
 ## Developer notes
 
 To submit bugs and feature requests, please report at [project issues](https://github.com/ItaloLopes/optic/issues).
+
+## Bibliography
 
 [1] Italo Lopes Oliveira, Luís Paulo Faina Garcia, Diego Moussallem and Renato Fileto. (2020). OPTIC: KnOwledge graPh-augmented enTity lInking approaCh. To be published.
 
