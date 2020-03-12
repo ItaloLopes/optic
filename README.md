@@ -36,7 +36,7 @@ The entity candidates employed on OPTIC is the same index employed on [AGDISTIS/
 
 ## Neural Network model training
 
-The model folder presents that code to train our Neural Network model based on knowledge and word embedding trained jointly. To train the model, execute the command:
+The model folder presents the code to train our Neural Network model based on knowledge and word embedding trained jointly. To train the model, execute the command:
 
 ```
 python3.7 train.py
