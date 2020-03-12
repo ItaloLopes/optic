@@ -111,6 +111,37 @@ Running as Web Service, it is necessary to pass each NIF file individually.
 
 To submit bugs and feature requests, please report at [project issues](https://github.com/ItaloLopes/optic/issues).
 
+## Results
+
+The table below presents the results of OPTIC on the [GERBIL](http://gerbil.aksw.org/gerbil/) benchmark system compared with others EL approaches. The datasets NEEL2014, NEEL2015, and NEEL2016 represent, respectively, the datasets microposts2014-Test, microposts2015-Test, microposts2016-Test available on GERBIL. The ERR value indicates that the annotator caused to many single errors on GERBIL. 
+
+| F1@Micro | NEEL2014 | NEEL2015 | NEEL2016 |
+| -------- | -------- | -------- | -------- |
+| ADEL | 0.591 | 0.783 | 0.801 |
+| AGDISTIS/MAG | 0.497 | 0.719 | 0.616 |
+| AIDA | 0.412 | 0.414 | 0.183 |
+| Babelfy | 0.475 | 0.341 | 0.157 |
+| DBpedia Spotlight | 0.452 | ERR | ERR |
+| FOX | 0.252 | 0.311 | 0.068 |
+| FREME NER | 0.419 | 0.313 | 0.162 |
+| OpenTapioca | 0.215 | 0.259 | 0.053 |
+| OPTIC | 0.2906 | 0.3362 | 0.5089 |
+
+The OPTIC results were obtained by using the following parameter values:
+	embed=200
+	hidden=200
+	layer=2
+	dropout=0.5
+	batch_size=1
+	extra=1
+	type=multi
+	max=100
+	boost=5
+	threshold=0.7
+	ws=3
+
+The OPTIC model already trained can be obtained [here](https://1drv.ms/u/s!AjCojhWwB578jvJK5sk-LdnS86Z3cA?e=E2N8nI).
+
 ## Bibliography
 
 [1] Italo Lopes Oliveira, Luís Paulo Faina Garcia, Diego Moussallem and Renato Fileto. (2020). OPTIC: KnOwledge graPh-augmented enTity lInking approaCh. To be published.
